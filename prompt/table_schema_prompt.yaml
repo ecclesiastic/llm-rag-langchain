@@ -1,0 +1,1404 @@
+    _type: prompt
+    input_variables:
+        ["input"]
+    template:
+        '''Given below are the table structures in raw schema in Oracle database
+              
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工年度考核信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              考核年度 VARCHAR2(20), 
+              考核结果 VARCHAR2(50), 
+              考核单位名称 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工项目(课题)表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              项目类型 VARCHAR2(50), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              项目名称 NVARCHAR2(100), 
+              项目批准号 NVARCHAR2(50), 
+              学科领域 NVARCHAR2(50), 
+              项目经费额度 VARCHAR2(50), 
+              开始日期 VARCHAR2(20), 
+              结束日期 VARCHAR2(20), 
+              项目中本人角色 VARCHAR2(50), 
+              本人排名 VARCHAR2(50), 
+              项目委托单位 NVARCHAR2(100), 
+              项目来源 NVARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工奖励表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              奖励类别 NVARCHAR2(100), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              获奖年月 VARCHAR2(20), 
+              奖励名称 NVARCHAR2(100), 
+              奖励级别 NVARCHAR2(100), 
+              奖励等级 NVARCHAR2(100), 
+              奖励其他等级 NVARCHAR2(100), 
+              本人排名 VARCHAR2(50), 
+              授奖国家(地区) VARCHAR2(50), 
+              授奖单位 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工联系方式信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              通讯地址 NVARCHAR2(800), 
+              联系电话 VARCHAR2(100), 
+              手机 VARCHAR2(100), 
+              电子邮箱 VARCHAR2(150), 
+              "LXDH_QX" VARCHAR2(100), 
+              "SJ_QX" VARCHAR2(100), 
+              "EMAIL_QX" VARCHAR2(150), 
+              其他联系方式 NVARCHAR2(500), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".临时机构代码表 
+                ( 主键UUID VARCHAR2(32), 
+              学校(机构)名称 VARCHAR2(200), 
+              学校(机构)标识码 VARCHAR2(50), 
+              学校(机构)所在地代码 VARCHAR2(50), 
+              学校(机构)属地管理教育行政部门代码 VARCHAR2(50), 
+              学校(机构)举办者码 VARCHAR2(50), 
+              学校(机构)办学类型码 VARCHAR2(50), 
+              学校(机构)性质类别码 VARCHAR2(50), 
+              学校(机构)所在地城乡分类码 VARCHAR2(50), 
+              独立设置少数民族学校(机构) VARCHAR2(50), 
+              是否新设立学校(机构) VARCHAR2(50), 
+              是否撤销(在用)，增加自定义状态[撤并中] VARCHAR2(50), 
+              撤并多个单位时用逗号分开 VARCHAR2(200), 
+              系统更新日期（时间戳：YYYYMMDD HH24:MI:SS） VARCHAR2(50), 
+              学校(机构)ID VARCHAR2(50), 
+              备注 VARCHAR2(200), 
+              所属学段 VARCHAR2(32), 
+              中央部署(0否,1是) VARCHAR2(10), 
+              学校所属主管教育行政部门代码 VARCHAR2(50), 
+              高校性质 VARCHAR2(20), 
+              是否部属学校(0否,1是) VARCHAR2(10), 
+              只使用核心指标(0否,1是) VARCHAR2(10), 
+              是否有教师(0否,1是) VARCHAR2(10), 
+              是否少数民族双语教学 VARCHAR2(10), 
+              安全保卫人员数 NUMBER, 
+              备注2 NVARCHAR2(200), 
+              统一社会信用代码 VARCHAR2(50), 
+              法定代表人 NVARCHAR2(800), 
+              手机号码 NVARCHAR2(300), 
+              学校（机构）类型（1临时学校，2其他机构） VARCHAR2(50), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              同步状态 VARCHAR2(10), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工技能及证书—语言能力信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              语种 NVARCHAR2(100), 
+              掌握程度 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".学校(机构)代码扩展 
+                ( 学校(机构)ID VARCHAR2(100), 
+              经度 VARCHAR2(100), 
+              纬度 VARCHAR2(100), 
+              机构地址 NVARCHAR2(500), 
+              机构邮编 VARCHAR2(50), 
+              采集机构名称 NVARCHAR2(200), 
+              举办者名称 NVARCHAR2(200), 
+              举办者详细名称 NVARCHAR2(200), 
+              是否普惠性民办幼儿园 VARCHAR2(100), 
+              民办学校营利性 VARCHAR2(100), 
+              享受乡村教师岗位生活补助情况 VARCHAR2(100), 
+              机构编码(cmis码） VARCHAR2(10), 
+              单位类别 VARCHAR2(100), 
+              联系人 NVARCHAR2(100), 
+              联系电话 VARCHAR2(200), 
+              电子邮箱 VARCHAR2(100), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              "CD_TIME" DATE, 
+              "CD_BATCH" VARCHAR2(30), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(12), 
+              "LXR_QX" VARCHAR2(800), 
+              "LXDH_QX" VARCHAR2(300), 
+              "EMAIL_QX" VARCHAR2(300), 
+              "SIGN" VARCHAR2(50)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".任课详情 
+                ( ID VARCHAR2(100), 
+              教师ID VARCHAR2(100), 
+              学年（或年度） VARCHAR2(20), 
+              学期 VARCHAR2(50), 
+              任教学段 VARCHAR2(200), 
+              任教课程 VARCHAR2(200), 
+              平均周课时 VARCHAR2(20), 
+              审核状态 VARCHAR2(20), 
+              数据来源 VARCHAR2(20), 
+              同步状态 VARCHAR2(20), 
+              是否删除 VARCHAR2(20), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6),  
+              "CD_TIME" DATE, 
+              "CD_BATCH" VARCHAR2(30), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(12), 
+              "SJYLZDID" VARCHAR2(32), 
+              "SIGN" VARCHAR2(2)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工专业技术职务聘任信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              聘任专业技术职务 NVARCHAR2(200), 
+              聘任开始年月 VARCHAR2(20), 
+              聘任结束年月 VARCHAR2(20), 
+              聘任单位名称 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工教育教学信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              学年（或年度） VARCHAR2(20), 
+              学期 VARCHAR2(50), 
+              任教学段 VARCHAR2(500), 
+              任课状况 VARCHAR2(50), 
+              任课状况为其他情况的具体说明 NVARCHAR2(100), 
+              任课课程类别 VARCHAR2(500), 
+              任课学科类别 VARCHAR2(500), 
+              任教课程 VARCHAR2(500), 
+              平均周课时 VARCHAR2(20), 
+              承担的其他工作 VARCHAR2(200), 
+              平均每周其他工作折合教学课时数 VARCHAR2(20), 
+              兼任工作 VARCHAR2(50), 
+              兼任其他工作名称 NVARCHAR2(100), 
+              是否为本科生上课 VARCHAR2(50), 
+              导师类别 VARCHAR2(50), 
+              现主要从事学科领域 VARCHAR2(500), 
+              课程教学课时数 VARCHAR2(20), 
+              其他工作折合课时数 VARCHAR2(20), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工基本待遇信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              年度 VARCHAR2(20), 
+              年工资收入(元) VARCHAR2(20), 
+              基本工资(元/月) VARCHAR2(20), 
+              绩效工资(元/月) VARCHAR2(20), 
+              乡村教师生活补助(元/月) VARCHAR2(20), 
+              特教津贴补贴(元/月) VARCHAR2(20), 
+              津贴补贴(元/月)（或其他津贴补贴(元/月)） VARCHAR2(20), 
+              其他(元/月) VARCHAR2(20), 
+              五险一金 NVARCHAR2(1000), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工专利或软件著作权表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              专利或软件著作权类型 VARCHAR2(50), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              专利或软件著作权名称 NVARCHAR2(400), 
+              学科领域 VARCHAR2(50), 
+              批准日期 VARCHAR2(20), 
+              本人角色 VARCHAR2(50), 
+              证书编号 NVARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工著作表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              著作类别 VARCHAR2(50), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              著作名称 NVARCHAR2(100), 
+              学科领域 VARCHAR2(50), 
+              出版日期 VARCHAR2(20), 
+              出版社名称 NVARCHAR2(100), 
+              出版号 NVARCHAR2(50), 
+              著作中本人角色 VARCHAR2(50), 
+              著作字数(字) VARCHAR2(20), 
+              本人撰写字数(字) VARCHAR2(20), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工文艺作品信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              文艺作品类别 VARCHAR2(50), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              文艺作品名称 NVARCHAR2(100), 
+              本人角色 VARCHAR2(50), 
+              完成时间 VARCHAR2(20), 
+              完成地点 NVARCHAR2(100), 
+              本人工作描述 NVARCHAR2(500), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工海外研修(访学)信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              是否有海外研修(访学)经历 VARCHAR2(50), 
+              开始日期 VARCHAR2(20), 
+              结束日期 VARCHAR2(20), 
+              国籍/地区 VARCHAR2(50), 
+              研修(访学)机构名称 NVARCHAR2(100), 
+              项目名称 NVARCHAR2(100), 
+              项目组织单位名称 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".指导学生参加竞赛获奖表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              奖励名称 NVARCHAR2(100), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              本人角色 VARCHAR2(50), 
+              奖项等级 NVARCHAR2(50), 
+              获奖年月 VARCHAR2(20), 
+              本人承担工作描述 NVARCHAR2(500), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6),  
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".国家标准或行业标准表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              标准号 NVARCHAR2(50), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              本人角色 VARCHAR2(50), 
+              发布日期 VARCHAR2(20), 
+              发布单位 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工国家医药证书表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              国家医药证书名称 NVARCHAR2(100), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              证书(批件)号 NVARCHAR2(50), 
+              本人角色 VARCHAR2(50), 
+              颁布或批准时间 VARCHAR2(20), 
+              有效期 NVARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".附设班代码表 
+                ( 主键UUID VARCHAR2(32), 
+              学校(机构)名称 VARCHAR2(200), 
+              学校(机构)标识码 VARCHAR2(50), 
+              学校(机构)办学类型码 VARCHAR2(50), 
+              附设班地址代码 VARCHAR2(50), 
+              附设班属地管理教育行政部门代码 VARCHAR2(50), 
+              附设班举办者码 VARCHAR2(50), 
+              附设班办学类型码 VARCHAR2(50), 
+              附设班所在地城乡分类码 VARCHAR2(50), 
+              是否新设立附设班 VARCHAR2(50), 
+              是否撤销(在用)，增加自定义状态[撤并中] VARCHAR2(50), 
+              系统更新日期（时间戳：YYYYMMDD HH24:MI:SS） VARCHAR2(50), 
+              附设班唯一标识ID VARCHAR2(50), 
+              备注 VARCHAR2(200), 
+              所属学段 VARCHAR2(32), 
+              中央部署(0否,1是) VARCHAR2(10), 
+              学校所属主管教育行政部门代码 VARCHAR2(50), 
+              高校性质 VARCHAR2(20), 
+              是否部属学校(0否,1是) VARCHAR2(10), 
+              只使用核心指标(0否,1是) VARCHAR2(10), 
+              是否有教师(0否,1是) VARCHAR2(10), 
+              是否少数民族双语教学 VARCHAR2(10), 
+              安全保卫人员数 NUMBER, 
+              备注2 NVARCHAR2(200), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              同步状态 VARCHAR2(10), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工基本信息表 
+                ( ID VARCHAR2(32), 
+              档案编号 VARCHAR2(50), 
+              临时档案编号 VARCHAR2(50), 
+              学校(机构)ID VARCHAR2(32), 
+              姓名 NVARCHAR2(200), 
+              曾用名 NVARCHAR2(800), 
+              性别 VARCHAR2(50), 
+              教职工号 NVARCHAR2(50), 
+              国籍/地区 VARCHAR2(50), 
+              身份证件类型 VARCHAR2(50), 
+              身份证件号 VARCHAR2(100), 
+              出生日期 VARCHAR2(20), 
+              籍贯 NVARCHAR2(2000), 
+              出生地 NVARCHAR2(2000), 
+              民族 VARCHAR2(50), 
+              政治面貌 VARCHAR2(500), 
+              婚姻状况 VARCHAR2(50), 
+              健康状况 VARCHAR2(50), 
+              最高学历 VARCHAR2(50), 
+              获得最高学历的院校或机构 NVARCHAR2(500), 
+              最高学位层次 VARCHAR2(100), 
+              最高学位名称 VARCHAR2(100), 
+              获得最高学位的院校或机构 NVARCHAR2(100), 
+              参加工作年月 VARCHAR2(20), 
+              从事特教起始年月 VARCHAR2(20), 
+              进本校年月（或进本园年月） VARCHAR2(20), 
+              教职工来源 VARCHAR2(200), 
+              学缘结构 VARCHAR2(500), 
+              教职工类别 VARCHAR2(50), 
+              是否在编 VARCHAR2(50), 
+              用人形式 VARCHAR2(50), 
+              签订合同情况 VARCHAR2(50), 
+              所在二级单位 NVARCHAR2(100), 
+              现任岗位类别 VARCHAR2(50), 
+              现任岗位等级 VARCHAR2(50), 
+              现任专业技术职务 VARCHAR2(50), 
+              是否全日制师范类专业毕业 VARCHAR2(50), 
+              是否全日制特殊教育专业毕业 VARCHAR2(50), 
+              是否受过特教专业培养培训 VARCHAR2(50), 
+              是否有特殊教育从业证书 VARCHAR2(50), 
+              是否全日制学前教育专业毕业 VARCHAR2(50), 
+              是否受过学前教育专业培养培训 VARCHAR2(50), 
+              信息技术应用能力 VARCHAR2(50), 
+              是否属于免费(公费)师范生 VARCHAR2(50), 
+              是否参加基层服务项目 VARCHAR2(100), 
+              参加基层服务项目起始年月 VARCHAR2(20), 
+              参加基层服务项目结束年月 VARCHAR2(20), 
+              是否是特级教师 VARCHAR2(50), 
+              是否县级及以上骨干教师 VARCHAR2(50), 
+              是否心理健康教育教师 VARCHAR2(50), 
+              是否“双师型”教师 VARCHAR2(50), 
+              是否具备职业技能等级证书 VARCHAR2(50), 
+              企业工作(实践)时长 VARCHAR2(50), 
+              海外研修(访学)经历 VARCHAR2(50), 
+              人员状态 VARCHAR2(50), 
+              个人照片 VARCHAR2(200), 
+              所属省份代码 VARCHAR2(12), 
+              当前业务 VARCHAR2(32), 
+              数据来源 VARCHAR2(10), 
+              档案状态 VARCHAR2(10), 
+              查重状态 VARCHAR2(10), 
+              审核状态 VARCHAR2(10), 
+              迁移数据状态 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              "XM_QX" VARCHAR2(200), 
+              "CSRQ_QX" VARCHAR2(20), 
+              地区代码（新增） VARCHAR2(20), 
+              现兼任工作 VARCHAR2(200), 
+              班主任且班内是否有随班就读学生 VARCHAR2(200), 
+              现任教课程 VARCHAR2(500), 
+              现平均每周课堂教学课时数 VARCHAR2(200), 
+              是否正在交流轮岗 VARCHAR2(200), 
+              轮岗专职/兼职情况 VARCHAR2(200), 
+              轮岗是否转隶人事关系 VARCHAR2(200), 
+              轮岗交流时长 VARCHAR2(200), 
+              现骨干教师称号（最高） VARCHAR2(200), 
+              现骨干学段（最高） VARCHAR2(200), 
+              现骨干学科（最高） VARCHAR2(200), 
+              现校长职级情况 VARCHAR2(200), 
+              "SJYLZD23" VARCHAR2(200), 
+              "SJYLZD24" VARCHAR2(200), 
+              "SJYLZD25" VARCHAR2(200), 
+              "SJYLZD26" VARCHAR2(200), 
+              "SJYLZD27" VARCHAR2(200), 
+              "SJYLZD28" VARCHAR2(200), 
+              "SJYLZD29" VARCHAR2(200), 
+              "SJYLZD30" VARCHAR2(200)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工岗位聘任信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              岗位类别 VARCHAR2(100), 
+              岗位等级 VARCHAR2(100), 
+              聘任开始年月 VARCHAR2(100), 
+              是否兼任其他岗位 VARCHAR2(100), 
+              兼任岗位类别 VARCHAR2(100), 
+              兼任岗位等级 VARCHAR2(100), 
+              是否双肩挑 VARCHAR2(100), 
+              双肩挑岗位类别 VARCHAR2(100), 
+              双肩挑岗位等级 VARCHAR2(100), 
+              是否为辅导员 VARCHAR2(100), 
+              党政职务（或校级职务） VARCHAR2(500), 
+              任职开始年月 VARCHAR2(20), 
+              党政级别 VARCHAR2(50), 
+              是否专职从事心理咨询工作 VARCHAR2(50), 
+              是否持有心理咨询资格证书 VARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工骨干信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              骨干教师类型 NVARCHAR2(100), 
+              骨干学段 NVARCHAR2(100), 
+              骨干学科 NVARCHAR2(100), 
+              其他学科 NVARCHAR2(100), 
+              履职起始时间 VARCHAR2(20), 
+              履职结束时间 VARCHAR2(20), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工师德处分信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              处分类别 NVARCHAR2(200), 
+              处分原因 NVARCHAR2(200), 
+              处分发生日期 VARCHAR2(20), 
+              处分记录描述 NVARCHAR2(200), 
+              处分单位名称 NVARCHAR2(100), 
+              处分日期 VARCHAR2(20), 
+              处分撤销日期 VARCHAR2(20), 
+              处分撤销原因 NVARCHAR2(200), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工国内培训信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              模块标识 VARCHAR2(32), 
+              业务ID VARCHAR2(32), 
+              培训年度 VARCHAR2(20), 
+              培训类别 NVARCHAR2(50), 
+              项目名称 NVARCHAR2(100), 
+              研修(访学)机构名称 NVARCHAR2(100), 
+              培训方式 NVARCHAR2(100), 
+              培训获得学时 VARCHAR2(20), 
+              培训获得学分 VARCHAR2(20), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工校长级职务 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              校长职级 VARCHAR2(50), 
+              任校长/书记 NVARCHAR2(150), 
+              履职起始时间 VARCHAR2(20), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工其他技能信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              其他技能名称 NVARCHAR2(100), 
+              其他技能掌握程度 VARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工师德荣誉信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              荣誉级别 VARCHAR2(50), 
+              获得荣誉称号 VARCHAR2(50), 
+              荣誉发生日期 VARCHAR2(20), 
+              荣誉记录描述 NVARCHAR2(200), 
+              荣誉授予单位名称 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工教师资格信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              教师资格证种类 NVARCHAR2(100), 
+              教师资格证号码 NVARCHAR2(100), 
+              任教学科 NVARCHAR2(500), 
+              证书颁发日期 VARCHAR2(20), 
+              颁发机构 NVARCHAR2(100), 
+              首次注册日期 VARCHAR2(20), 
+              首次注册结论 NVARCHAR2(100), 
+              定期注册日期 VARCHAR2(20), 
+              定期注册结论 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".课后服务详情 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(100), 
+              学年（或年度） VARCHAR2(20), 
+              学期 VARCHAR2(50), 
+              每周课后服务时长(小时) NVARCHAR2(200), 
+              课后服务补助(元/小时) NVARCHAR2(200), 
+              课后服务补助来源 NVARCHAR2(200), 
+              其他课后服务补助来源 NVARCHAR2(200), 
+              审核状态 VARCHAR2(20), 
+              数据来源 VARCHAR2(20), 
+              同步状态 VARCHAR2(20), 
+              是否删除 VARCHAR2(20), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" DATE, 
+              "CD_BATCH" VARCHAR2(30), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(12), 
+              "SJYLZDID" VARCHAR2(32), 
+              "SIGN" VARCHAR2(2)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".学校（机构）表 
+                ( 主键UUID VARCHAR2(32), 
+              学校(机构)名称 VARCHAR2(200), 
+              学校(机构)标识码 VARCHAR2(50), 
+              学校(机构)所在地代码 VARCHAR2(50), 
+              学校(机构)属地管理教育行政部门代码 VARCHAR2(50), 
+              学校(机构)举办者码 VARCHAR2(50), 
+              学校(机构)办学类型码 VARCHAR2(50), 
+              学校(机构)性质类别码 VARCHAR2(50), 
+              学校(机构)所在地城乡分类码 VARCHAR2(50), 
+              独立设置少数民族学校(机构) VARCHAR2(50), 
+              是否新设立学校(机构) VARCHAR2(50), 
+              是否撤销(在用)，增加自定义状态[撤并中] VARCHAR2(50), 
+              撤并多个单位时用逗号分开 VARCHAR2(200), 
+              系统更新日期（时间戳：YYYYMMDD HH24:MI:SS） VARCHAR2(50), 
+              学校(机构)ID VARCHAR2(50), 
+              备注 VARCHAR2(200), 
+              所属学段 VARCHAR2(32), 
+              中央部署(0否,1是) VARCHAR2(10), 
+              学校所属主管教育行政部门代码 VARCHAR2(50), 
+              高校性质 VARCHAR2(20), 
+              是否部属学校(0否,1是) VARCHAR2(10), 
+              只使用核心指标(0否,1是) VARCHAR2(10), 
+              是否有教师(0否,1是) VARCHAR2(10), 
+              是否少数民族双语教学 VARCHAR2(10), 
+              安全保卫人员数 NUMBER, 
+              备注2 NVARCHAR2(200), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              同步状态 VARCHAR2(10), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工学习经历信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              获得学历 NVARCHAR2(100), 
+              获得学历的国家(地区) NVARCHAR2(100), 
+              获得学历的院校或机构 NVARCHAR2(100), 
+              所学专业 NVARCHAR2(100), 
+              是否师范类专业 NVARCHAR2(100), 
+              入学年月 VARCHAR2(20), 
+              毕业年月 VARCHAR2(20), 
+              学位层次 NVARCHAR2(100), 
+              学位名称 NVARCHAR2(100), 
+              获得学位的国家(地区) NVARCHAR2(100), 
+              获得学位的院校或机构 NVARCHAR2(100), 
+              学位授予年月 VARCHAR2(20), 
+              学习方式 NVARCHAR2(100), 
+              在学单位类别 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工咨询报告或研究报告表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              报告题目 NVARCHAR2(400), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              本人角色 VARCHAR2(50), 
+              报告时间 VARCHAR2(20), 
+              委托方 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工论文表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              论文名称 NVARCHAR2(400), 
+              是否是代表性成果和项目 VARCHAR2(50), 
+              发表刊物名称 NVARCHAR2(200), 
+              发表年月 VARCHAR2(20), 
+              卷号 NVARCHAR2(50), 
+              期号 NVARCHAR2(50), 
+              起始页码 VARCHAR2(20), 
+              结束页码 VARCHAR2(20), 
+              本人角色 VARCHAR2(50), 
+              学科领域 VARCHAR2(50), 
+              论文收录情况 VARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工证书信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              证书类型 NVARCHAR2(100), 
+              语言证书名称 VARCHAR2(50), 
+              证书名称 NVARCHAR2(200), 
+              发证年月 VARCHAR2(50), 
+              发证单位 NVARCHAR2(500), 
+              证书编号 NVARCHAR2(50), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(50), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工师德考核信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              师德考核时间 VARCHAR2(20), 
+              师德考核结论 VARCHAR2(50), 
+              师德考核单位名称 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工工作经历信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              任职单位名称 NVARCHAR2(100), 
+              任职开始年月 VARCHAR2(20), 
+              任职结束年月 VARCHAR2(20), 
+              单位性质类别 NVARCHAR2(100), 
+              任职岗位 NVARCHAR2(100), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工入选人才项目信息表 
+                ( ID VARCHAR2(32), 
+              教师ID VARCHAR2(32), 
+              入选人才项目名称 NVARCHAR2(100), 
+              入学年月 VARCHAR2(20), 
+              审核状态 VARCHAR2(10), 
+              数据来源 VARCHAR2(10), 
+              同步状态 VARCHAR2(10), 
+              是否删除 VARCHAR2(10), 
+              创建人 VARCHAR2(50), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(50), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_BATCH" VARCHAR2(50), 
+              "CD_DATASOURCE" VARCHAR2(50), 
+              "CD_OPERATION" VARCHAR2(20), 
+              "NEW_SIGN" VARCHAR2(20), 
+              "INSERT_ID" VARCHAR2(50), 
+              地区代码（新增） VARCHAR2(20)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+
+
+               CREATE TABLE "SM_BJJY_BIGDATA".教职工交流轮岗信息表 
+                ( ID VARCHAR2(255), 
+              教师ID VARCHAR2(255), 
+              交流轮岗类型 VARCHAR2(255), 
+              是否调动人事关系 VARCHAR2(255), 
+              开始年月 VARCHAR2(255), 
+              结束年月 VARCHAR2(255), 
+              原单位名称 VARCHAR2(255), 
+              交流轮岗单位名称 VARCHAR2(255), 
+              审核状态 VARCHAR2(255), 
+              数据来源 VARCHAR2(255), 
+              同步状态 VARCHAR2(255), 
+              是否删除 VARCHAR2(20), 
+              创建人 VARCHAR2(255), 
+              创建时间 TIMESTAMP (6), 
+              修改人 VARCHAR2(255), 
+              修改时间 TIMESTAMP (6), 
+              入表时间 TIMESTAMP (6), 
+              地区代码（新增） VARCHAR2(255), 
+              "INSERT_ID" VARCHAR2(255), 
+              "NEW_SIGN" VARCHAR2(255), 
+              "CD_BATCH" VARCHAR2(255), 
+              "CD_TIME" TIMESTAMP (6), 
+              "CD_DATASOURCE" VARCHAR2(255), 
+              "CD_OPERATION" VARCHAR2(255)
+                ) SEGMENT CREATION IMMEDIATE 
+               PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+               STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+               PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+               TABLESPACE "SM_BJJY_BIGDATA" 
+              
+              take user questions and response back with sql query.
+                example : 
+                user question : 按从教年限（5年及以下、6-10年）对比分布情况
+                your generated sql query : 
+                                select count(*) , jl from (
+                                select case when (2023-substr(参加工作年月,1,4)+1)<=5 then "5年以下"
+                                when (2023-substr(参加工作年月,1,4)+1)>=6  and (2023-substr(参加工作年月,1,4)+1)<=10 then "6-10年" 
+                                end jl
+                                from 教职工基本信息表) group by jl;
+                
+                example : 
+                user question : 按教师职级对比分布情况
+                your generated sql query : 
+                                select count(*) ,  现任岗位等级 from 教职工基本信息表 group by 现任岗位等级;
+                
+              user question : {input}
+              your generated sql query : '''
